@@ -38,6 +38,16 @@
         </profile>
     </profiles>
 
+    <repositories>
+        <repository>
+            <id>gvr-mvn-repo</id>
+            <url>https://raw.githubusercontent.com/jianhong2014/mvn-repo/master</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
