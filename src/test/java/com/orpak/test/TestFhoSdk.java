@@ -29,15 +29,16 @@ public class TestFhoSdk {
     private FhoLoginService fhoLoginService;
 
 
-
     @Test
     public void testFhoLogin(){
-        fhoDataConfig.setFhoIp("39.108.208.168");
+        fhoDataConfig.setFhoIp("10.28.188.35");
         SOLogin soLogin = new SOLogin();
         soLogin.setUser("Admin");
         soLogin.setPassword("Gvrorpak20!9");
         soLogin.setROCode("0");
         fhoLoginService.login(soLogin);
+
+        fhoLoginService.getStationList("0");
     }
 
     @Test

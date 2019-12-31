@@ -76,4 +76,14 @@ public class FhoLoginService {
         SOLogoutResponse response = (SOLogoutResponse) webServiceTemplate.marshalSendAndReceive(request);
         logger.info("log out result {}", JSON.toJSON(response));
     }
+
+    public void getStationList(String type){
+        HOGetStationList  stationList = new HOGetStationList();
+        stationList.setSessionID(sessionId);
+        stationList.setStationSubType(0);
+        logger.info("getStationList {}",JSON.toJSON(stationList));
+        HOGetStationListResponse response = (HOGetStationListResponse) webServiceTemplate.
+                marshalSendAndReceive(stationList);
+        logger.info("log out result {}", JSON.toJSON(response));
+    }
 }

@@ -54,7 +54,7 @@ public class FhoDataConfig {
 
     //@Value("${fho.ws.default-uri}")
     //Ӧ�ó���Ҫ����IP first
-    private String fhoIp = "39.108.208.168";
+    private String fhoIp = "10.28.188.35";
 
     private String wsUrl = "";
 
@@ -66,7 +66,7 @@ public class FhoDataConfig {
 
     @Bean
     public WebServiceTemplate webServiceTemplate() throws Exception {
-        wsUrl = "https://"+fhoIp+":2443/SiteOmatService/SiteOmatService.asmx";
+        wsUrl = "https://"+fhoIp+":2445/SiteOmatService/SiteOmatService.asmx";
         WebServiceTemplate webServiceTemplate = new WebServiceTemplate();
         webServiceTemplate.setMarshaller(marshaller());
         webServiceTemplate.setUnmarshaller(marshaller());
